@@ -1,0 +1,92 @@
+---
+title: "71point4 Analyst Assignment"
+author: "André le Roux"
+date: "`r Sys.Date()`"
+output:
+  pdf_document:
+    latex_engine: xelatex
+    keep_tex: true
+    fig_caption: yes
+fontsize: 11pt
+mainfont: Times New Roman
+geometry: margin=1in
+header-includes:
+  - \usepackage{setspace}
+  - \doublespacing
+---
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE, results='hide'}
+
+rm(list = ls()) # Clean your environment:
+gc() # garbage collection - It can be useful to call gc after a large object has been removed, as this may prompt R to return memory to the operating system.
+library(tidyverse)
+list.files('code/', full.names = T, recursive = T) %>% .[grepl('.R', .)] %>% as.list() %>% walk(~source(.))
+```
+
+# Introduction
+
+This is the introduction section where you can provide an overview of your analysis.
+
+## Question 3
+
+
+
+## Graph 4.1
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+
+Plot1 <- Graph4_1()
+Plot1
+
+```
+
+## Graph 4.2
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+
+Plot2 <- Get_Gender_Class_Split()
+Plot2
+
+```
+
+## Graph 4.3
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+
+Plot3 <- Graph4_3()
+Plot3
+
+```
+
+
+## Graph 4.4
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+
+Plot4 <- Graph4_4()
+Plot4
+
+```
+
+
+## Graph 4.5
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+
+Plot5 <- Graph4_5()
+Plot5
+
+```
+
+
+## Graph 4.6
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+
+Plot6 <- Graph4_6()
+Plot6
+
+```
+
+
+
