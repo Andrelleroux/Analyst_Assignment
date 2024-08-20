@@ -5,5 +5,7 @@
 bin/*
 .bundle/*
 
+*.csv
+
 .kitchen/
 .kitchen.local.yml
