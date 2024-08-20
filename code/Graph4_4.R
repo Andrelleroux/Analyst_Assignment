@@ -7,6 +7,7 @@ Graph4_4 <- function(){
 
     Data_Age_Hist$pclass <- as.factor(Data_Age_Hist$pclass)
 
+
     Plot4_3 <- Data_Age_Hist %>% ggplot(aes(x = age, y = Freq)) +
         geom_bar(aes(fill = pclass), position = "identity", stat = "identity", alpha = 0.6) +
         geom_smooth(aes(colour = pclass), linewidth = 0.75, alpha = 0.2, se = F) +
@@ -15,10 +16,10 @@ Graph4_4 <- function(){
              y = "Number of Passengers") +
         scale_fill_manual(name = "",
                           labels = c("First Class", "Second Class", "Third Class"),
-                          values = c("darkorchid1", "yellow1", "darkslategray2")) +
+                          values = c("darkorchid1", "darkgoldenrod1", "darkslategray2")) +
         scale_colour_manual(name = "",
                           labels = c("First Class", "Second Class", "Third Class"),
-                          values = c("purple3", "darkgoldenrod2", "deepskyblue")) +
+                          values = c("purple3", "darkgoldenrod1", "deepskyblue")) +
         theme_minimal()
 
     Plot4_3

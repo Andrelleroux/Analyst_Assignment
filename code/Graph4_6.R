@@ -14,7 +14,7 @@ Graph4_6 <- function(){
     Plot4_6 <- Data_First %>%
         ggplot(aes(x = desig_group, y = Freq, fill = got_boat)) +
         geom_bar(position = "fill", stat = "identity") +
-        labs(title = "Survival Rate by Population Demographics",
+        labs(title = "Percentage of Passengers in Lifeboats by Population Demographics",
              x = "Demographics",
              y = "Percentage of Passengers") +
         scale_fill_manual(name = "",
