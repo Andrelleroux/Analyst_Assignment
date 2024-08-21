@@ -20,27 +20,34 @@ header-includes:
 rm(list = ls()) # Clean your environment:
 gc() # garbage collection - It can be useful to call gc after a large object has been removed, as this may prompt R to return memory to the operating system.
 library(tidyverse)
+library(caret)
+library(rsample)
+library(kableExtra)
+library(stargazer)
 library(pacman)
 list.files('code/', full.names = T, recursive = T) %>% .[grepl('.R', .)] %>% as.list() %>% walk(~source(.))
 ```
 
-# Introduction
-
-This is the introduction section where you can provide an overview of your analysis.
-
-## Question 3
+# Question 3
 
 I was unsure of the level of difficulty that the question should be, so I decided to go for a question with two part that can be given individually or together.
 
-##### Part A
-
+##### Part A:
 You are a supplier of wood and own a 20km by 10km forest on which you plant trees. Assume that the trees are equally distributed and that the number of trees tends to infinity. As you want to monitor the forest you set up 158 microphones that each monitor a 1km by 1km area. 
 
 What is the probability of hearing at least one of every 2 trees that fall in the forest sequentially?
 
-##### Part B
+##### Part B:
+There exits a 4 digit number x, where each digit consists of a unique number. The number x has the following characteristics:
 
+ + The first two digits of x form a prime number.
+ + the second two digits are a square.
+ + x - 1 is also a prime number.
+ + It is divisible by the nearest rounded percentage of part A.
+ 
+What number is x?
 
+# Question 4
 
 ## Graph 4.1
 
@@ -107,4 +114,18 @@ Plot6
 ```
 
 From this graph it becomes clear that women and children had priority when getting onto lifeboats. Less than 20% of adult men got into lifeboats, while more than 70% of adult women got into lifeboats. It should also be noted that barely more than 50% of children got into lifeboats. This might suggest that preferences might have also fallen along class lines with children from the second and third classes having a lower probability of getting into the lifeboats. This difference in class would also influence the percentage of passengers in the lifeboats as third and second class passenger classes consisted of more men.
+
+# Bonus Question
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+
+Plot_Simp_Logit <- No_Boat_Model()
+Plot_Simp_Logit
+
+```
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+Plot_Hindsight <- Hindsight_Logit()
+Plot_Hindsight
+```
 

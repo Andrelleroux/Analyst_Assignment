@@ -58,6 +58,20 @@
 \setcounter{secnumdepth}{-\maxdimen} % remove section numbering
 \usepackage{setspace}
 \doublespacing
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{wrapfig}
+\usepackage{float}
+\usepackage{colortbl}
+\usepackage{pdflscape}
+\usepackage{tabu}
+\usepackage{threeparttable}
+\usepackage{threeparttablex}
+\usepackage[normalem]{ulem}
+\usepackage{makecell}
+\usepackage{xcolor}
 \ifLuaTeX
   \usepackage{selnolig}  % disable illegal ligatures
 \fi
@@ -72,26 +86,51 @@
 
 \title{71point4 Analyst Assignment}
 \author{André le Roux}
-\date{2024-08-20}
+\date{2024-08-21}
 
 \begin{document}
 \maketitle
 
-\hypertarget{introduction}{%
-\section{Introduction}\label{introduction}}
-
-This is the introduction section where you can provide an overview of
-your analysis.
-
 \hypertarget{question-3}{%
-\subsection{Question 3}\label{question-3}}
+\section{Question 3}\label{question-3}}
 
 I was unsure of the level of difficulty that the question should be, so
-I decided to go for a question with two part that can given individually
-or together.
+I decided to go for a question with two part that can be given
+individually or together.
 
 \hypertarget{part-a}{%
-\subparagraph{Part A}\label{part-a}}
+\subparagraph{Part A:}\label{part-a}}
+
+You are a supplier of wood and own a 20km by 10km forest on which you
+plant trees. Assume that the trees are equally distributed and that the
+number of trees tends to infinity. As you want to monitor the forest you
+set up 158 microphones that each monitor a 1km by 1km area.
+
+What is the probability of hearing at least one of every 2 trees that
+fall in the forest sequentially?
+
+\hypertarget{part-b}{%
+\subparagraph{Part B:}\label{part-b}}
+
+There exits a 4 digit number x, where each digit consists of a unique
+number. The number x has the following characteristics:
+
+\begin{itemize}
+\tightlist
+\item
+  The first two digits of x form a prime number.
+\item
+  the second two digits are a square.
+\item
+  x - 1 is also a prime number.
+\item
+  It is divisible by the nearest rounded percentage of part A.
+\end{itemize}
+
+What number is x?
+
+\hypertarget{question-4}{%
+\section{Question 4}\label{question-4}}
 
 \hypertarget{graph-4.1}{%
 \subsection{Graph 4.1}\label{graph-4.1}}
@@ -133,14 +172,106 @@ skewed of the three classes.
 
 \includegraphics{README_files/figure-latex/unnamed-chunk-5-1.pdf}
 
+In this graph we overlap the histogram plots and add a smoothed line to
+represent the possible underlying distribution. By overlapping the plots
+we can easily compare the various distributions, from this we can see
+that the age of third class passengers is more right skewed than the
+other classes. The first class on the other hand, has a skewness value
+closer to 0.
+
 \hypertarget{graph-4.5}{%
 \subsection{Graph 4.5}\label{graph-4.5}}
 
 \includegraphics{README_files/figure-latex/unnamed-chunk-6-1.pdf}
 
+We can see from this plot that the men in the third class on-board the
+titanic was mostly younger men from their teens to early thirties, with
+the mode age being 21. This suggests that they were passengers that were
+willing to forego a certain degree of comfort in order to be part of the
+first journey of the Titanic and to reach America. These are people that
+might not have been able to afford more expensive means of travel, but
+wanted to start a new life in America.
+
 \hypertarget{graph-4.6}{%
 \subsection{Graph 4.6}\label{graph-4.6}}
 
 \includegraphics{README_files/figure-latex/unnamed-chunk-7-1.pdf}
+
+From this graph it becomes clear that women and children had priority
+when getting onto lifeboats. Less than 20\% of adult men got into
+lifeboats, while more than 70\% of adult women got into lifeboats. It
+should also be noted that barely more than 50\% of children got into
+lifeboats. This might suggest that preferences might have also fallen
+along class lines with children from the second and third classes having
+a lower probability of getting into the lifeboats. This difference in
+class would also influence the percentage of passengers in the lifeboats
+as third and second class passenger classes consisted of more men.
+
+\hypertarget{bonus-question}{%
+\section{Bonus Question}\label{bonus-question}}
+
+\begin{verbatim}
+## Confusion Matrix and Statistics
+## 
+##           Reference
+## Prediction   0   1
+##          0 104  21
+##          1  24  60
+##                                           
+##                Accuracy : 0.7847          
+##                  95% CI : (0.7227, 0.8384)
+##     No Information Rate : 0.6124          
+##     P-Value [Acc > NIR] : 7.94e-08        
+##                                           
+##                   Kappa : 0.5495          
+##                                           
+##  Mcnemar's Test P-Value : 0.7656          
+##                                           
+##             Sensitivity : 0.8125          
+##             Specificity : 0.7407          
+##          Pos Pred Value : 0.8320          
+##          Neg Pred Value : 0.7143          
+##              Prevalence : 0.6124          
+##          Detection Rate : 0.4976          
+##    Detection Prevalence : 0.5981          
+##       Balanced Accuracy : 0.7766          
+##                                           
+##        'Positive' Class : 0               
+## 
+\end{verbatim}
+
+\includegraphics{README_files/figure-latex/unnamed-chunk-8-1.pdf}
+
+\begin{verbatim}
+## Confusion Matrix and Statistics
+## 
+##           Reference
+## Prediction   0   1
+##          0 128   3
+##          1   0  78
+##                                          
+##                Accuracy : 0.9856         
+##                  95% CI : (0.9586, 0.997)
+##     No Information Rate : 0.6124         
+##     P-Value [Acc > NIR] : <2e-16         
+##                                          
+##                   Kappa : 0.9696         
+##                                          
+##  Mcnemar's Test P-Value : 0.2482         
+##                                          
+##             Sensitivity : 1.0000         
+##             Specificity : 0.9630         
+##          Pos Pred Value : 0.9771         
+##          Neg Pred Value : 1.0000         
+##              Prevalence : 0.6124         
+##          Detection Rate : 0.6124         
+##    Detection Prevalence : 0.6268         
+##       Balanced Accuracy : 0.9815         
+##                                          
+##        'Positive' Class : 0              
+## 
+\end{verbatim}
+
+\includegraphics{README_files/figure-latex/unnamed-chunk-9-1.pdf}
 
 \end{document}

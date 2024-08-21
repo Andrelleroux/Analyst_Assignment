@@ -1,27 +1,27 @@
 {
-    "id": "FC5705BF",
-    "path": "~/Job_Application_Stuff/71point4_App/code/Graph4_5.R",
-    "project_path": "code/Graph4_5.R",
+    "id": "A371A673",
+    "path": "~/Job_Application_Stuff/71point4_App/code/Logit_Model.R",
+    "project_path": "code/Logit_Model.R",
     "type": "r_source",
     "hash": "0",
     "contents": "",
     "dirty": false,
-    "created": 1723624383790.0,
+    "created": 1724146665302.0,
     "source_on_save": false,
-    "relative_order": 7,
+    "relative_order": 9,
     "properties": {
         "tempName": "Untitled1",
         "source_window_id": "",
         "Source": "Source",
-        "cursorPosition": "2,53",
-        "scrollLine": "0"
+        "cursorPosition": "67,27",
+        "scrollLine": "44"
     },
     "folds": "",
-    "lastKnownWriteTime": 1723625090,
+    "lastKnownWriteTime": 1724244099,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1723625090279,
+    "last_content_update": 1724244099405,
     "read_only": false,
     "read_only_alternatives": []
 }
