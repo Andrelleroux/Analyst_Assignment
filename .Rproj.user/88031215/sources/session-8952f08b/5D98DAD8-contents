@@ -30,7 +30,7 @@ list.files('code/', full.names = T, recursive = T) %>% .[grepl('.R', .)] %>% as.
 
 # Question 3
 
-I was unsure of the level of difficulty that the question should be, so I decided to go for a question with two part that can be given individually or together.
+I was unsure of the level of difficulty that the question should be, so I decided to go for a question with two parts that can be given individually or together.
 
 ##### Part A:
 You are a supplier of wood and own a 20km by 10km forest on which you plant trees. Assume that the trees are equally distributed and that the number of trees tends to infinity. As you want to monitor the forest you set up 158 microphones that each monitor a 1km by 1km area. 
@@ -117,6 +117,10 @@ From this graph it becomes clear that women and children had priority when getti
 
 # Bonus Question
 
+In order to predict the probability that a passenger survives the Titanic shipwreck, based on prior information, I use a Logistic model that is trained on 80% of the data with 10-fold cross validation. This prediction model is then tested on 20% of the data. The "caret" package in R was used to train and test this model. The data used to train this model consisted of the survived variable as the dependent variable and age, class, sex, fare, sibsp (number of siblings and spouses) and parch (number of parents/children on board). Whether they got into a lifeboat is not included, as a model with this variable included gives an accuracy of 98.56% due to the importance of being in a lifeboat. Thus, we believe a forward looking model from the point of departure is more interesting. 
+
+Although not very aesthetic, I have included a breakdown of the performance of the model on test data, followed by a variable importance plot, which states the most and least important variables in predicting which passengers pass away and which do not.  
+
 ```{r, echo=FALSE, warning=FALSE, message=FALSE}
 
 Plot_Simp_Logit <- No_Boat_Model()
@@ -124,8 +128,10 @@ Plot_Simp_Logit
 
 ```
 
-```{r, echo=FALSE, warning=FALSE, message=FALSE}
-Plot_Hindsight <- Hindsight_Logit()
-Plot_Hindsight
-```
+This model predicts with an accuracy of 78.47% and finds that the most important predictors of survival are sex, which class they are in and their age. Linearity is not one of the features of a Logistic regression, for that reason the model can predict the probability given a vector of specific inputs, but the coefficients are not as easy to interpret. The coefficients are however still reliable in predicting the correct direction. From this we can see that the person who is most likely to survive is a newborn woman in first class, with no siblings and who had an extremely high fare (550).
+
+Using this model we can also predict individual probabilities. For example, Rose from the movie Titanic (Woman, 1st class, 17, 0 siblings, 500 fare, 1 parent) would have a 98.62% chance of survival based on this model. While Jack Dawson (Man, 3rd class, 20, 0 siblings, 0 fare, 0 parents) only has a 15.54% chance of survival based on this model.
+
+Thank you for the opportunity to do this project and I hope to hear more about this interesting opportunity.
+
 
